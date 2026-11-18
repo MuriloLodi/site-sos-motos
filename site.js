@@ -80,6 +80,21 @@ const MENSAGEM = 'Olá, Tatá! Preciso de guincho para minha moto. Minha localiz
     sections.forEach((s) => io.observe(s));
   }
 
+  // FAQ em sanfona: abrir uma pergunta fecha as outras, e a pergunta clicada fica parada na tela
+  const faqs = [...document.querySelectorAll('.faq details')];
+  faqs.forEach((d) => {
+    d.querySelector('summary').addEventListener('click', (e) => {
+      e.preventDefault();
+      const summary = e.currentTarget;
+      const before = summary.getBoundingClientRect().top;
+      const opening = !d.open;
+      faqs.forEach((o) => { if (o !== d) o.open = false; });
+      d.open = opening;
+      const shift = summary.getBoundingClientRect().top - before;
+      if (shift) window.scrollBy({ top: shift, behavior: 'instant' });
+    });
+  });
+
   // balão do WhatsApp flutuante: aparece depois de 4 s e some depois de 8 s
   const float = document.querySelector('.wa-float');
   if (float) {
