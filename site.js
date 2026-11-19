@@ -68,7 +68,7 @@ const MENSAGEM = 'Olá, Tatá! Preciso de guincho para minha moto. Minha localiz
   }
 
   // link do menu marcado conforme a seção na tela
-  const links = [...document.querySelectorAll('.header__nav a')];
+  const links = [...document.querySelectorAll('.header__nav a[href^="#"]')];
   const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
