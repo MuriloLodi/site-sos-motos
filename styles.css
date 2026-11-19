@@ -272,7 +272,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .footer__brand img { height: 92px; width: auto; }
 .footer__brand p { margin-top: 18px; max-width: 360px; color: var(--gray); }
 .footer__col { display: grid; gap: 10px; align-content: start; }
-.footer__col h3 { margin-bottom: 6px; font-size: 18px; letter-spacing: .1em; text-transform: uppercase; color: var(--red); }
+.footer__col h3 { margin-bottom: 6px; font-size: 18px; letter-spacing: .1em; text-transform: uppercase; color: #FF3B44; }
 .footer__col a { text-decoration: none; color: rgba(255, 255, 255, .8); transition: color .2s; }
 .footer__col a:hover { color: #fff; }
 .footer__col p { color: var(--gray); font-size: 15px; }
