@@ -328,6 +328,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .rel__item { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid rgba(0, 0, 0, .08); color: var(--ink); font-weight: 600; text-decoration: none; }
 .rel__item span { color: var(--red); transition: transform .2s var(--ease); }
 .rel__item:hover span { transform: translateX(4px); }
+@media (max-width: 640px) {
+  .svc-hero__btns .btn { width: 100%; justify-content: center; }
+}
 @media (max-width: 920px) {
   .svc { grid-template-columns: 1fr; }
   .svc__side { position: static; }
